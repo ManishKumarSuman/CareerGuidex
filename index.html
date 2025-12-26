@@ -1,673 +1,1082 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CareerGuidex | Get Real Career Guidance from Industry Professionals</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-</head>
-<body>
-    <!-- Header / Navbar -->
-    <header class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-compass"></i>
-                    </div>
-                    <div class="logo-text">
-                        <h1>CareerGuidex</h1>
-                        <p>EXPERT GUIDANCE</p>
-                    </div>
-                </div>
-                
-                <nav class="nav-links">
-                    <a href="#how-it-works">How It Works</a>
-                    <a href="#mentors">Browse Mentors</a>
-                    <a href="#success-stories">Success Stories</a>
-                    <a href="#why-careerguidex">Why CareerGuidex</a>
-                </nav>
-                
-                <div class="nav-buttons">
-                    <button class="btn btn-secondary" id="become-mentor-nav">Become a Mentor</button>
-                    <button class="btn btn-primary" id="book-slot-nav">
-                        <i class="fas fa-gift"></i> Book Free Slot
-                    </button>
-                </div>
-                
-                <button class="mobile-menu-btn" id="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareerGuidex | AI-Powered Career Guidance</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo">
+          <div class="logo-icon">CG</div>
+          <div class="logo-text">Career<span>Guidex</span></div>
+        </a>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu-content">
-            <button class="close-menu-btn" id="close-menu-btn">
-                <i class="fas fa-times"></i>
-            </button>
-            <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
-            <a href="#mentors" class="mobile-nav-link">Browse Mentors</a>
-            <a href="#success-stories" class="mobile-nav-link">Success Stories</a>
-            <a href="#why-careerguidex" class="mobile-nav-link">Why CareerGuidex</a>
-            <div class="mobile-menu-buttons">
-                <button class="btn btn-secondary" id="become-mentor-mobile">Become a Mentor</button>
-                <button class="btn btn-primary" id="book-slot-mobile">
-                    <i class="fas fa-gift"></i> Book Free Slot
-                </button>
-            </div>
+        <div class="nav-links">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#mentors" class="nav-link">Mentors</a>
+          <a href="#how-it-works" class="nav-link">How it Works</a>
+          <a href="#testimonials" class="nav-link">Testimonials</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </div>
+
+        <div class="nav-buttons">
+          <button 
+    class="btn-secondary"
+    onclick="window.open('https://forms.gle/ts52nUnJUDSyypux8', '_blank')">
+    Mentor+
+  </button>
+          <button class="btn-primary" id="bookFreeSessionBtn">
+            Book Free Session
+          </button>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="hero-bg-circle"></div>
+        <div class="hero-bg-circle"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text animate-fade-in">
+            <div class="hero-badge animate-slide-left">
+              <div class="badge-icon"><i class="fas fa-rocket"></i></div>
+              <span>Career Guidance Platform with Real Industry Mentors</span>
+            </div>
+
+            <h1
+              class="hero-title animate-fade-in"
+              style="animation-delay: 0.2s"
+            >
+              Launch Your Career with
+              <span style="color: var(--primary)">Expert</span> Guidance
+            </h1>
+
+            <p
+              class="hero-subtitle animate-fade-in"
+              style="animation-delay: 0.4s"
+            >
+              Connect 1-on-1 with verified mentors from top tech companies. Get
+              personalized career advice, interview prep, and roadmap planning.
+              Your first session is completely free!
+            </p>
+
+            <div
+              class="hero-buttons animate-fade-in"
+              style="animation-delay: 0.6s"
+            >
+              <button class="btn-primary" id="heroBookBtn">
+                <i class="fas fa-calendar-check"></i> Book Free Call
+              </button>
+              <button class="btn-secondary">
+                <i class="fas fa-play-circle"></i> 
+              </button>
+            </div>
+
+            <div
+              class="hero-stats animate-fade-in"
+              style="animation-delay: 0.8s"
+            >
+              <div class="stat-item">
+                <div class="stat-value">500+</div>
+                <div class="stat-label">Happy Members</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">50+</div>
+                <div class="stat-label">Expert Mentors</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">95%</div>
+                <div class="stat-label">Success Rate</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hero-visual animate-fade-in"
+            style="animation-delay: 0.5s"
+          >
+            <div class="floating-card">
+              <div class="floating-card-icon">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <div class="floating-card-text">
+                <h4>Verified Mentors</h4>
+                <p>LinkedIn verified professionals</p>
+              </div>
+            </div>
+
+            <div class="floating-card">
+              <div class="floating-card-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="floating-card-text">
+                <h4>Flexible Timing</h4>
+                <p>Book slots 24/7</p>
+              </div>
+            </div>
+
+            <div class="floating-card">
+              <div class="floating-card-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="floating-card-text">
+                <h4>Secure Payment</h4>
+                <p>100% refund guarantee</p>
+              </div>
+            </div>
+
+            <div class="main-visual">
+              <!-- This would be an animated illustration -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPANIES SECTION ============ -->
+    <section class="companies-section">
+      <div class="container">
+        <div class="section-header animate-fade-in">
+          <div class="section-subtitle">TRUSTED BY PROFESSIONALS AT</div>
+          <h2 class="section-title">Top Tech Companies Worldwide</h2>
+          <p class="section-description">
+            Our mentors are currently working at leading technology companies
+            and bring real-world industry experience to guide your career.
+          </p>
+        </div>
+
+        <div class="companies-carousel">
+          <!-- Company logos will be added as .png files -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+            class="company-logo"
+            alt="Amazon"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+            class="company-logo"
+            alt="Microsoft"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+            class="company-logo"
+            alt="Google"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+            class="company-logo"
+            alt="Apple"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+            class="company-logo"
+            alt="Netflix"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
+            class="company-logo"
+            alt="LinkedIn"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/96/Meta-Logo.png"
+            class="company-logo"
+            alt="Meta"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/44/IBM_logo.svg"
+            class="company-logo"
+            alt="IBM"
+          />
+          <!-- Duplicate for seamless scroll -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+            class="company-logo"
+            alt="Amazon"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+            class="company-logo"
+            alt="Microsoft"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+            class="company-logo"
+            alt="Google"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+            class="company-logo"
+            alt="Apple"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header animate-fade-in">
+          <div class="section-subtitle">SIMPLE PROCESS</div>
+          <h2 class="section-title">How CareerGuidex Works</h2>
+          <p class="section-description">
+            Get expert career guidance in just 4 simple steps. No complicated
+            procedures, just direct mentorship.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card animate-fade-in" style="animation-delay: 0.1s">
+            <div class="step-number">1</div>
+            <div class="step-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3 class="step-title">Browse Mentors</h3>
+            <p class="step-description">
+              Explore our verified mentors from top companies. Filter by domain,
+              experience, and availability.
+            </p>
+          </div>
+
+          <div class="step-card animate-fade-in" style="animation-delay: 0.2s">
+            <div class="step-number">2</div>
+            <div class="step-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3 class="step-title">Book Your Slot</h3>
+            <p class="step-description">
+              Select a date and time that works for you. No login required for
+              your first free session.
+            </p>
+          </div>
+
+          <div class="step-card animate-fade-in" style="animation-delay: 0.3s">
+            <div class="step-number">3</div>
+            <div class="step-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <h3 class="step-title">1-on-1 Session</h3>
+            <p class="step-description">
+              Connect directly with your mentor via video call. Get personalized
+              advice and actionable insights.
+            </p>
+          </div>
+
+          <div class="step-card animate-fade-in" style="animation-delay: 0.4s">
+            <div class="step-number">4</div>
+            <div class="step-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="step-title">Track Progress</h3>
+            <p class="step-description">
+              Get a customized roadmap and follow-up resources. Track your
+              career growth with our tools.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENTORS SECTION ============ -->
+    <section class="mentors-section" id="mentors">
+      <div class="container">
+        <div class="section-header animate-fade-in">
+          <div class="section-subtitle">MEET OUR EXPERTS</div>
+          <h2 class="section-title">Browse Verified Mentors</h2>
+          <p class="section-description">
+            Connect with industry professionals from top companies. Each mentor
+            is verified and brings real-world experience.
+          </p>
+        </div>
+
+        <div class="mentors-carousel-container">
+          <button class="carousel-btn prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="mentors-carousel" id="mentorsCarousel">
+            <!-- Mentor 1 -->
+            <div
+              class="mentor-card"
+              data-mentor="Sarah Johnson"
+              data-role="Senior Product Manager at Microsoft"
+              data-price="2499"
+            >
+              <div class="mentor-header">
+                <div class="mentor-badge">TOP RATED</div>
+                <img
+                  src="https://randomuser.me/api/portraits/women/32.jpg"
+                  alt="Sarah Johnson"
+                  class="mentor-avatar"
+                />
+                <h3 class="mentor-name">Sarah Johnson</h3>
+                <p class="mentor-title">Senior Product Manager at Microsoft</p>
+                <div class="mentor-experience">
+                  <i class="fas fa-briefcase"></i>
+                  <span>12 years experience</span>
+                </div>
+              </div>
+              <div class="mentor-body">
+                <div class="mentor-skills">
+                  <span class="skill-tag">Product Strategy</span>
+                  <span class="skill-tag">User Research</span>
+                  <span class="skill-tag">Roadmapping</span>
+                  <span class="skill-tag">Agile</span>
+                </div>
+                <div class="mentor-stats">
+                  <div class="stat">
+                    <div class="stat-value">4.9</div>
+                    <div class="stat-label">Rating</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-value">142</div>
+                    <div class="stat-label">Sessions</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-value">4h</div>
+                    <div class="stat-label">Response Time</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mentor-footer">
+                <div class="price-info">
+                  <div class="price">₹2,499</div>
+                  <div class="duration">60 min session</div>
+                  <div class="availability">
+                    <i
+                      class="fas fa-circle"
+                      style="color: var(--success); font-size: 10px"
+                    ></i>
+                    Available Today
+                  </div>
+                </div>
+                <button
+                  class="btn-primary book-mentor-btn"
+                  style="padding: 10px 20px; font-size: 14px"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+
+            <!-- Mentor 2 -->
+            <div
+              class="mentor-card"
+              data-mentor="Rajesh Kumar"
+              data-role="Lead Software Engineer at Google"
+              data-price="1999"
+            >
+              <div class="mentor-header">
+                <div class="mentor-badge">POPULAR</div>
+                <img
+                  src="https://randomuser.me/api/portraits/men/54.jpg"
+                  alt="Rajesh Kumar"
+                  class="mentor-avatar"
+                />
+                <h3 class="mentor-name">Rajesh Kumar</h3>
+                <p class="mentor-title">Lead Software Engineer at Google</p>
+                <div class="mentor-experience">
+                  <i class="fas fa-briefcase"></i>
+                  <span>9 years experience</span>
+                </div>
+              </div>
+              <div class="mentor-body">
+                <div class="mentor-skills">
+                  <span class="skill-tag">System Design</span>
+                  <span class="skill-tag">Backend</span>
+                  <span class="skill-tag">Scalability</span>
+                  <span class="skill-tag">Cloud</span>
+                </div>
+                <div class="mentor-stats">
+                  <div class="stat">
+                    <div class="stat-value">4.8</div>
+                    <div class="stat-label">Rating</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-value">98</div>
+                    <div class="stat-label">Sessions</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-value">6h</div>
+                    <div class="stat-label">Response Time</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mentor-footer">
+                <div class="price-info">
+                  <div class="price">₹1,999</div>
+                  <div class="duration">60 min session</div>
+                  <div class="availability">
+                    <i
+                      class="fas fa-circle"
+                      style="color: var(--accent); font-size: 10px"
+                    ></i>
+                    Available This Week
+                  </div>
+                </div>
+                <button
+                  class="btn-primary book-mentor-btn"
+                  style="padding: 10px 20px; font-size: 14px"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+
+            <!-- Mentor 3 -->
+            <div
+              class="mentor-card"
+              data-mentor="Priya Sharma"
+              data-role="Data Science Director at Amazon"
+              data-price="2999"
+            >
+              <div class="mentor-header">
+                <div class="mentor-badge">EXPERT</div>
+                <img
+                  src="https://randomuser.me/api/portraits/women/68.jpg"
+                  alt="Priya Sharma"
+                  class="mentor-avatar"
+                />
+                <h3 class="mentor-name">Priya Sharma</h3>
+                <p class="mentor-title">Data Science Director at Amazon</p>
+                <div class="mentor-experience">
+                  <i class="fas fa-briefcase"></i>
+                  <span>14 years experience</span>
+                </div>
+              </div>
+              <div class="mentor-body">
+                <div class="mentor-skills">
+                  <span class="skill-tag">Machine Learning</span>
+                  <span class="skill-tag">Analytics</span>
+                  <span class="skill-tag">Big Data</span>
+                  <span class="skill-tag">AI</span>
+                </div>
+                <div class="mentor-stats">
+                  <div class="stat">
+                    <div class="stat-value">4.9</div>
+                    <div class="stat-label">Rating</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-value">176</div>
+                    <div class="stat-label">Sessions</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-value">2h</div>
+                    <div class="stat-label">Response Time</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mentor-footer">
+                <div class="price-info">
+                  <div class="price">₹2,999</div>
+                  <div class="duration">60 min session</div>
+                  <div class="availability">
+                    <i
+                      class="fas fa-circle"
+                      style="color: var(--success); font-size: 10px"
+                    ></i>
+                    Available Today
+                  </div>
+                </div>
+                <button
+                  class="btn-primary book-mentor-btn"
+                  style="padding: 10px 20px; font-size: 14px"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+
+            <!-- Mentor 4 -->
+            <div
+              class="mentor-card"
+              data-mentor="Michael Chen"
+              data-role="UX Design Lead at Meta"
+              data-price="1799"
+            >
+              <div class="mentor-header">
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Michael Chen"
+                  class="mentor-avatar"
+                />
+                <h3 class="mentor-name">Michael Chen</h3>
+                <p class="mentor-title">UX Design Lead at Meta</p>
+                <div class="mentor-experience">
+                  <i class="fas fa-briefcase"></i>
+                  <span>8 years experience</span>
+                </div>
+              </div>
+              <div class="mentor-body">
+                <div class="mentor-skills">
+                  <span class="skill-tag">UI/UX</span>
+                  <span class="skill-tag">Design Systems</span>
+                  <span class="skill-tag">User Testing</span>
+                  <span class="skill-tag">Figma</span>
+                </div>
+                <div class="mentor-stats">
+                  <div class="stat">
+                    <div class="stat-value">4.7</div>
+                    <div class="stat-label">Rating</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-value">87</div>
+                    <div class="stat-label">Sessions</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-value">8h</div>
+                    <div class="stat-label">Response Time</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mentor-footer">
+                <div class="price-info">
+                  <div class="price">₹1,799</div>
+                  <div class="duration">45 min session</div>
+                  <div class="availability">
+                    <i
+                      class="fas fa-clock"
+                      style="color: var(--accent); font-size: 10px"
+                    ></i>
+                    Next Available Slot
+                  </div>
+                </div>
+                <button
+                  class="btn-primary book-mentor-btn"
+                  style="padding: 10px 20px; font-size: 14px"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+
+            <!-- Mentor 5 -->
+            <div
+              class="mentor-card"
+              data-mentor="Ananya Patel"
+              data-role="Digital Marketing Head at Flipkart"
+              data-price="1699"
+            >
+              <div class="mentor-header">
+                <div class="mentor-badge">TRENDING</div>
+                <img
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  alt="Ananya Patel"
+                  class="mentor-avatar"
+                />
+                <h3 class="mentor-name">Ananya Patel</h3>
+                <p class="mentor-title">Digital Marketing Head at Flipkart</p>
+                <div class="mentor-experience">
+                  <i class="fas fa-briefcase"></i>
+                  <span>11 years experience</span>
+                </div>
+              </div>
+              <div class="mentor-body">
+                <div class="mentor-skills">
+                  <span class="skill-tag">Growth Marketing</span>
+                  <span class="skill-tag">SEO</span>
+                  <span class="skill-tag">Content Strategy</span>
+                  <span class="skill-tag">Social Media</span>
+                </div>
+                <div class="mentor-stats">
+                  <div class="stat">
+                    <div class="stat-value">4.8</div>
+                    <div class="stat-label">Rating</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-value">114</div>
+                    <div class="stat-label">Sessions</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-value">12h</div>
+                    <div class="stat-label">Response Time</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mentor-footer">
+                <div class="price-info">
+                  <div class="price">₹1,699</div>
+                  <div class="duration">60 min session</div>
+                  <div class="availability">
+                    <i
+                      class="fas fa-circle"
+                      style="color: var(--accent); font-size: 10px"
+                    ></i>
+                    Available This Week
+                  </div>
+                </div>
+                <button
+                  class="btn-primary book-mentor-btn"
+                  style="padding: 10px 20px; font-size: 14px"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-btn next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CALENDAR MODAL ============ -->
+    <div class="modal-overlay" id="calendarModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="modal-close" id="closeModal">
+            <i class="fas fa-times"></i>
+          </button>
+          <h3 class="modal-title" id="modalMentorName">
+            Book Session with Sarah Johnson
+          </h3>
+          <p class="modal-subtitle" id="modalMentorRole">
+            Senior Product Manager at Microsoft
+          </p>
+        </div>
+        <div class="modal-body">
+          <div class="calendar-container">
+            <div class="calendar-header">
+              <div class="calendar-month" id="currentMonth">March 2024</div>
+              <div class="calendar-nav">
+                <button class="calendar-nav-btn" id="prevMonth">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="calendar-nav-btn" id="nextMonth">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="calendar-weekdays">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="calendar-days" id="calendarDays">
+              <!-- Days will be populated by JavaScript -->
+            </div>
+          </div>
+
+          <h4 style="margin-bottom: 15px; color: var(--dark)">
+            Select Time Slot
+          </h4>
+          <div class="time-slots" id="timeSlots">
+            <div class="time-slot">09:00 AM</div>
+            <div class="time-slot">10:00 AM</div>
+            <div class="time-slot">11:00 AM</div>
+            <div class="time-slot">12:00 PM</div>
+            <div class="time-slot">02:00 PM</div>
+            <div class="time-slot">03:00 PM</div>
+            <div class="time-slot">04:00 PM</div>
+            <div class="time-slot">05:00 PM</div>
+            <div class="time-slot">06:00 PM</div>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-primary" id="confirmBookingBtn" style="flex: 1">
+              <i class="fas fa-whatsapp"></i> Confirm via WhatsApp
+            </button>
+            <button class="btn-secondary" id="cancelBookingBtn" style="flex: 1">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Get <span class="highlight">Real</span> Career Guidance from <span class="highlight">Industry Professionals</span></h1>
-                <p class="hero-subtitle">Talk 1-on-1 with experienced mentors from top companies. No login. No registration. Your first guidance call is completely free.</p>
-                
-                <div class="hero-buttons">
-                    <button class="btn btn-primary btn-hero" id="book-slot-hero">
-                        <i class="fas fa-gift"></i> Book Free 15-min Call
-                    </button>
-                    <a href="#mentors" class="btn btn-outline btn-hero">Explore Mentors</a>
-                </div>
-                
-                <div class="hero-trust">
-                    <p><i class="fas fa-check-circle"></i> First call free</p>
-                    <p><i class="fas fa-check-circle"></i> Verified mentors</p>
-                    <p><i class="fas fa-check-circle"></i> No login required</p>
-                </div>
+    <!-- ============ TESTIMONIALS SECTION ============ -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header animate-fade-in">
+          <div class="section-subtitle">SUCCESS STORIES</div>
+          <h2 class="section-title">What Our Users Say</h2>
+          <p class="section-description">
+            Hear from professionals who transformed their careers with guidance
+            from our expert mentors.
+          </p>
+        </div>
+
+        <div class="testimonials-carousel">
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "As a recent graduate, I was confused about my career path. My
+              mentor helped me create a clear roadmap and prepare for
+              interviews. Within 2 months, I landed a job at a top tech
+              company!"
             </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">AR</div>
+              <div class="author-info">
+                <h4>Ananya Roy</h4>
+                <p>UX Designer at Adobe</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "The 1-on-1 session with a Google engineer completely changed my
+              approach to system design. The practical tips and real-world
+              examples helped me ace my FAANG interviews."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">RK</div>
+              <div class="author-info">
+                <h4>Rahul Kumar</h4>
+                <p>Software Engineer at Amazon</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "I was transitioning from marketing to product management. My
+              mentor from Microsoft provided invaluable guidance on building the
+              right skills and portfolio. I got promoted within 6 months!"
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">PS</div>
+              <div class="author-info">
+                <h4>Priya Singh</h4>
+                <p>Product Manager at Swiggy</p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <!-- Floating logos in background -->
-        <div class="floating-logos">
-            <div class="logo-item">Microsoft</div>
-            <div class="logo-item">Google</div>
-            <div class="logo-item">TCS</div>
-            <div class="logo-item">Amazon</div>
-            <div class="logo-item">Infosys</div>
-            <div class="logo-item">Deloitte</div>
-            <div class="logo-item">Accenture</div>
-            <div class="logo-item">Flipkart</div>
-        </div>
+      </div>
     </section>
 
-    <!-- Trust Line Section -->
-    <section class="trust-line">
-        <div class="container">
-            <div class="trust-label">
-                <span>Mentors from professionals at</span>
+    <!-- ============ FOOTER ============ -->
+    <footer id="contact">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col">
+            <div class="footer-logo">
+              <div class="logo-icon">CG</div>
+              <div class="footer-logo-text">CareerGuidex</div>
             </div>
-            <div class="company-ticker">
-                <div class="company-ticker-content">
-                    <span>Microsoft</span>
-                    <span>•</span>
-                    <span>Google</span>
-                    <span>•</span>
-                    <span>TCS</span>
-                    <span>•</span>
-                    <span>Amazon</span>
-                    <span>•</span>
-                    <span>Infosys</span>
-                    <span>•</span>
-                    <span>Deloitte</span>
-                    <span>•</span>
-                    <span>Accenture</span>
-                    <span>•</span>
-                    <span>Flipkart</span>
-                    <span>•</span>
-                    <span>Microsoft</span>
-                    <span>•</span>
-                    <span>Google</span>
-                    <span>•</span>
-                    <span>TCS</span>
-                    <span>•</span>
-                    <span>Amazon</span>
-                    <span>•</span>
-                    <span>Infosys</span>
-                    <span>•</span>
-                    <span>Deloitte</span>
-                    <span>•</span>
-                    <span>Accenture</span>
-                    <span>•</span>
-                    <span>Flipkart</span>
-                </div>
+            <p class="footer-description">
+              AI-powered career guidance platform connecting aspiring
+              professionals with verified mentors from top companies worldwide.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-youtube"></i>
+              </a>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>How CareerGuidex Works</h2>
-                <p>Verified LinkedIn profiles . No bots , No recordings . Real humans only .</p>
-            </div>
-            
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <h3>Book your free slot</h3>
-                    <p>Pick a time that works for you. No login required.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Talk to a real mentor</h3>
-                    <p>1-on-1 call with an experienced industry professional.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Get clear direction</h3>
-                    <p>Practical advice and next steps tailored to your career.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+          <div class="footer-col">
+            <h3 class="footer-heading">Platform</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Find Mentors</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> How it Works</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Success Stories</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Pricing</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> FAQ</a>
+              </li>
+            </ul>
+          </div>
 
-    <!-- Mentor Listing Section -->
-    <section class="mentor-listing" id="mentors">
-        <div class="container">
-            <div class="section-header">
-                <h2>Browse Verified Mentors</h2>
-                <p>Connect with industry professionals from top companies</p>
-            </div>
-            
-            <!-- Filter Bar -->
-            <div class="filter-bar">
-                <div class="filter-item">
-                    <label for="domain-filter">Domain:</label>
-                    <select id="domain-filter" class="filter-select">
-                        <option value="all">All Domains</option>
-                        <option value="software">Software Engineering</option>
-                        <option value="product">Product Management</option>
-                        <option value="data">Data Science</option>
-                        <option value="design">UX/UI Design</option>
-                        <option value="marketing">Digital Marketing</option>
-                        <option value="finance">Finance & Banking</option>
-                    </select>
-                </div>
-                
-                <div class="filter-item">
-                    <label for="experience-filter">Experience:</label>
-                    <select id="experience-filter" class="filter-select">
-                        <option value="all">All Experience Levels</option>
-                        <option value="5+">5+ years</option>
-                        <option value="10+">10+ years</option>
-                        <option value="15+">15+ years</option>
-                    </select>
-                </div>
-                
-                <div class="filter-item">
-                    <label for="price-filter">Price:</label>
-                    <select id="price-filter" class="filter-select">
-                        <option value="all">All Prices</option>
-                        <option value="low">Low to High</option>
-                        <option value="high">High to Low</option>
-                    </select>
-                </div>
-            </div>
-            
-            <!-- Mentor Cards Container -->
-            <div class="mentor-cards" id="mentor-cards-container">
-                <!-- Mentor cards will be generated by JavaScript -->
-            </div>
-            
-            <div class="booking-notice">
-                <p><i class="fas fa-info-circle"></i> <strong>First call free:</strong> Every new user gets one free guidance call. After that, all bookings are paid.</p>
-                <p><i class="fas fa-shield-alt"></i> <strong>No login required:</strong> Book directly with your email address.</p>
-            </div>
-        </div>
-    </section>
+          <div class="footer-col">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> About Us</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Careers</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Blog</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Press</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Contact</a>
+              </li>
+            </ul>
+          </div>
 
-    <!-- Success Stories Section -->
-    <section class="success-stories" id="success-stories">
-        <div class="container">
-            <div class="section-header">
-                <h2>Success Stories</h2>
-                <p>What our users say about their experience</p>
-            </div>
-            
-            <div class="testimonial-container">
-                <div class="testimonial-track" id="testimonial-track">
-                    <!-- Testimonial cards will be added by JavaScript -->
-                </div>
-            </div>
-            
-            <div class="testimonial-dots" id="testimonial-dots">
-                <!-- Dots will be added by JavaScript -->
-            </div>
+          <div class="footer-col">
+            <h3 class="footer-heading">Legal</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Cookie Policy</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> GDPR</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Security</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <!-- Why CareerGuidex Section -->
-    <section class="why-careerguidex" id="why-careerguidex">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why CareerGuidex</h2>
-                <p>Because career decisions need clarity, not confusion.</p>
-            </div>
-            
-            <div class="value-points">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3>Real Industry Mentors</h3>
-                    <p>Guidance from professionals who are currently working in the industry — not generic coaches.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Clear, Practical Advice</h3>
-                    <p>Focused on real decisions like switching roles, preparing for interviews, or choosing the right path.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-gift"></i>
-                    </div>
-                    <h3>First Call is Free</h3>
-                    <p>Understand your situation first. Decide later. No pressure, no commitment.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Simple & Honest Platform</h3>
-                    <p>No login, no long forms. Just book a slot and talk to a mentor.</p>
-                </div>
-            </div>
+        <div class="footer-bottom">
+          <p>
+            © 2024 CareerGuidex. All rights reserved. | Made with
+            <i class="fas fa-heart" style="color: var(--danger)"></i> for career
+            seekers worldwide
+          </p>
         </div>
-    </section>
-
-    <!-- Become a Mentor Section -->
-    <section class="become-mentor-section">
-        <div class="container">
-            <div class="become-mentor-content">
-                <h2>Share Your Experience. Become a Mentor.</h2>
-                <p>Help students and professionals make better career decisions. Get paid for your time and create real impact.</p>
-                
-                <div class="mentor-benefits">
-                    <div class="benefit">
-                        <i class="fas fa-hands-helping"></i>
-                        <p>Help others with real career decisions</p>
-                    </div>
-                    <div class="benefit">
-                        <i class="fas fa-calendar-alt"></i>
-                        <p>Flexible availability — you choose your slots</p>
-                    </div>
-                    <div class="benefit">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <p>Earn for your time and expertise</p>
-                    </div>
-                </div>
-                
-                <button class="btn btn-primary btn-mentor" id="become-mentor-section">
-                    Apply to Become a Mentor
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Clear answers to common questions</p>
-            </div>
-            
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Is the first call really free?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! Every new user gets one completely free guidance call with any mentor of their choice. No hidden charges, no commitments.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Are mentors verified?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely. Every mentor on CareerGuidex goes through a verification process where we validate their professional background, experience, and current employment.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you guarantee jobs?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>No, we don't guarantee jobs. CareerGuidex provides guidance, advice, and mentorship to help you make informed career decisions and improve your chances in the job market. The outcome depends on multiple factors including your effort and market conditions.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How does payment work?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Your first call is free. For subsequent calls, you'll pay the mentor's session fee. We use secure payment gateways (Razorpay/Stripe) for all transactions. You'll receive a payment link after booking a paid session.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What if I need to cancel or reschedule?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You can cancel or reschedule your session up to 24 hours before the scheduled time at no charge. For cancellations within 24 hours, the mentor's cancellation policy will apply.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What topics can I discuss with a mentor?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You can discuss a wide range of career topics including career transitions, interview preparation, skill development, resume feedback, salary negotiation, industry insights, and professional growth strategies.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Become a Mentor Motivation Strip -->
-    <section class="mentor-motivation">
-        <div class="container">
-            <div class="motivation-content">
-                <h3>Why Become a Mentor on CareerGuidex?</h3>
-                <div class="motivation-points">
-                    <p><i class="fas fa-check"></i> Help others make better career decisions</p>
-                    <p><i class="fas fa-check"></i> Share real-world experience that actually matters</p>
-                    <p><i class="fas fa-check"></i> Earn for your time while creating real impact</p>
-                </div>
-                <button class="btn btn-primary btn-motivation" id="become-mentor-motivation">
-                    Apply to Become a Mentor
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-compass"></i>
-                        </div>
-                        <div class="footer-logo-text">
-                            <h3>CareerGuidex</h3>
-                        </div>
-                    </div>
-                    <p class="footer-description">CareerGuidex connects career seekers with experienced industry professionals to help them make clearer, confident career decisions.</p>
-                    <p class="footer-trust"><i class="fas fa-shield-alt"></i> Verified mentors • First call free • Simple booking</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>For Career Seekers</h4>
-                    <ul class="footer-links">
-                        <li><a href="#mentors">Find a Mentor</a></li>
-                        <li><a href="#" class="book-free-footer">Book Free Call</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#success-stories">Success Stories</a></li>
-                        <li><a href="#faq">Pricing / Sessions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>For Mentors</h4>
-                    <ul class="footer-links">
-                        <li><a href="#" class="become-mentor-footer">Become a Mentor</a></li>
-                        <li><a href="#faq">Mentor Guidelines</a></li>
-                        <li><a href="#faq">Mentor FAQs</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Resources</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Company & Support</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">About CareerGuidex</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Refund & Cancellation Policy</a></li>
-                    </ul>
-                    <div class="support-email">
-                        <p><i class="fas fa-envelope"></i> support@careerguidex.com</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-social">
-                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>© CareerGuidex. All rights reserved.</p>
-                <p class="footer-built">Built with a focus on clarity, trust, and real guidance.</p>
-            </div>
-        </div>
+      </div>
     </footer>
 
-    <!-- Booking Modal -->
-    <div class="modal-overlay" id="booking-modal-overlay">
-        <div class="modal-container">
-            <div class="modal-header">
-                <h3>Book Your Session</h3>
-                <button class="modal-close" id="modal-close">
-                    <i class="fas fa-times"></i>
-                </button>
+<div class="modal-overlay" id="whatsappModal">
+    <div class="modal-container" id="whatsappFormModal">
+        <div class="modal-header">
+            <button class="modal-close" id="closeWhatsappModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-icon">
+                <i class="fas fa-headset"></i>
             </div>
-            
-            <div class="modal-body">
-                <div class="mentor-info-summary" id="mentor-info-summary">
-                    <!-- Mentor info will be populated here -->
-                </div>
-                
-                <div class="booking-form-container">
-                    <form id="booking-form">
-                        <div class="form-group">
-                            <label for="full-name">Full Name</label>
-                            <input type="text" id="full-name" name="full-name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="purpose">Purpose of Session</label>
-                            <select id="purpose" name="purpose">
-                                <option value="">Select a purpose</option>
-                                <option value="career-change">Career Change Guidance</option>
-                                <option value="interview-prep">Interview Preparation</option>
-                                <option value="resume-review">Resume Review</option>
-                                <option value="skill-guidance">Skill Development Guidance</option>
-                                <option value="industry-insights">Industry Insights</option>
-                                <option value="salary-negotiation">Salary Negotiation</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group" id="custom-purpose-container" style="display: none;">
-                            <label for="custom-purpose">Please specify</label>
-                            <textarea id="custom-purpose" name="custom-purpose" rows="2"></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="session-date">Preferred Date</label>
-                            <input type="date" id="session-date" name="session-date" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="session-time">Preferred Time</label>
-                            <select id="session-time" name="session-time" required>
-                                <option value="">Select a time slot</option>
-                                <option value="9:00 AM">9:00 AM - 10:00 AM</option>
-                                <option value="11:00 AM">11:00 AM - 12:00 PM</option>
-                                <option value="2:00 PM">2:00 PM - 3:00 PM</option>
-                                <option value="4:00 PM">4:00 PM - 5:00 PM</option>
-                                <option value="6:00 PM">6:00 PM - 7:00 PM</option>
-                            </select>
-                        </div>
-                        
-                        <div class="booking-summary">
-                            <div class="summary-item">
-                                <span>Session Type:</span>
-                                <span id="session-type-display">Free Session</span>
-                            </div>
-                            <div class="summary-item">
-                                <span>Duration:</span>
-                                <span id="session-duration-display">60 minutes</span>
-                            </div>
-                            <div class="summary-item total">
-                                <span>Total:</span>
-                                <span id="session-price-display">₹0</span>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-confirm-booking" id="confirm-booking-btn">
-                            Confirm Booking
-                        </button>
-                        
-                        <div class="booking-notice-small">
-                            <p><i class="fas fa-info-circle"></i> Your seat will be reserved once you confirm. You'll receive a confirmation email with details.</p>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <h3 class="modal-title">Book Your Free Session</h3>
+            <p class="modal-subtitle">Fill in your details and we'll connect you with an expert mentor</p>
         </div>
-    </div>
-
-    <!-- Booking Confirmation Modal -->
-    <div class="modal-overlay" id="confirmation-modal-overlay">
-        <div class="modal-container confirmation-modal">
-            <div class="confirmation-header">
-                <div class="confirmation-icon">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-                <h3>Your Seat is Confirmed!</h3>
-                <p>Your guidance session has been successfully booked.</p>
-            </div>
-            
-            <div class="confirmation-body">
-                <div class="confirmation-details">
-                    <div class="detail-item">
-                        <span class="detail-label">Mentor:</span>
-                        <span class="detail-value" id="confirmation-mentor-name">Sarah Johnson</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Date & Time:</span>
-                        <span class="detail-value" id="confirmation-session-time">Tomorrow, 3:00 PM - 4:00 PM</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Session Type:</span>
-                        <span class="detail-value" id="confirmation-session-type">Free Guidance Session</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Unique Seat ID:</span>
-                        <span class="detail-value seat-id" id="confirmation-seat-id">CGX-84291</span>
-                    </div>
+        <div class="modal-body">
+            <form id="whatsappBookingForm">
+                <div class="form-group">
+                    <label for="fullName">
+                        <i class="fas fa-user"></i> Full Name
+                    </label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
                 </div>
                 
-                <div class="confirmation-message" id="confirmation-message">
-                    <p><strong>Your free guidance call is confirmed.</strong> You'll receive an email with the meeting link and details within 24 hours.</p>
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i> Email Address
+                    </label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
                 </div>
                 
-                <div class="confirmation-actions">
-                    <button class="btn btn-primary" id="close-confirmation-btn">Done</button>
-                    <button class="btn btn-outline" id="add-to-calendar-btn">
-                        <i class="fas fa-calendar-plus"></i> Add to Calendar
+                <div class="form-group">
+                    <label for="purpose">
+                        <i class="fas fa-bullseye"></i> Purpose of Session
+                    </label>
+                    <textarea id="purpose" name="purpose" required placeholder="Tell us about your career goals..."></textarea>
+                </div>
+                
+                <div class="form-footer">
+                    <div class="whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>We'll contact you via WhatsApp</span>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Submit & Continue
                     </button>
                 </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="successModal">
+    <div class="modal-container success-modal">
+        <div class="modal-header">
+            <div class="modal-icon">
+                <i class="fas fa-check"></i>
             </div>
+            <h3 class="modal-title">All Set! 🎉</h3>
+            <p class="modal-subtitle">Your free session request has been submitted successfully</p>
         </div>
-    </div>
-
-    <!-- Glassmorphism Button Effect Container -->
-    <div class="liquid-container" id="liquid-container">
-        <div class="liquid-button" id="liquid-button">
-            <i class="fas fa-gift"></i> Book Free Slot
-        </div>
-    </div>
-
-    <!-- Liquid Effect Form -->
-    <div class="liquid-form-container" id="liquid-form-container">
-        <div class="liquid-form" id="liquid-form">
-            <div class="liquid-form-header">
-                <h3>Book Your Free Session</h3>
-                <button class="liquid-form-close" id="liquid-form-close">
-                    <i class="fas fa-times"></i>
+        <div class="modal-body">
+            <p style="text-align: center; margin-bottom: 25px; color: var(--gray);">
+                We're now redirecting you to WhatsApp to finalize your booking. 
+                Please send the pre-filled message to confirm your session.
+            </p>
+            
+            <div class="success-actions">
+                <button class="btn-whatsapp" id="openWhatsAppBtn">
+                    <i class="fab fa-whatsapp"></i> Open WhatsApp Now
+                </button>
+                <button class="btn-secondary" id="closeSuccessModal">
+                    Close This Window
                 </button>
             </div>
-            <div class="liquid-form-body">
-                <div class="form-group">
-                    <label for="liquid-full-name">Full Name</label>
-                    <input type="text" id="liquid-full-name" placeholder="Enter your full name">
-                </div>
-                <div class="form-group">
-                    <label for="liquid-email">Email Address</label>
-                    <input type="email" id="liquid-email" placeholder="Enter your email address">
-                </div>
-                <div class="form-group">
-                    <label for="liquid-purpose">Purpose</label>
-                    <select id="liquid-purpose">
-                        <option value="">Select a purpose</option>
-                        <option value="career-guidance">Career Guidance</option>
-                        <option value="interview-prep">Interview Preparation</option>
-                        <option value="resume-review">Resume Review</option>
-                        <option value="skill-advice">Skill Development Advice</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <button class="btn btn-primary btn-liquid-submit" id="liquid-submit-btn">
-                    Book My Free Slot
-                </button>
-                <p class="liquid-form-notice">
-                    <i class="fas fa-lock"></i> Your information is secure. We don't share your data.
-                </p>
+            
+            <div style="text-align: center; margin-top: 25px; color: var(--gray); font-size: 14px;">
+                <i class="fas fa-info-circle"></i> Our team will contact you within 2 hours
             </div>
         </div>
     </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // ✅ 1. Configuration
+        const WHATSAPP_NUMBER = "919583438210"; 
+
+        // ✅ 2. Elements Selection
+        const whatsappModal = document.getElementById('whatsappModal');
+        const successModal = document.getElementById('successModal');
+        const closeWhatsappModal = document.getElementById('closeWhatsappModal');
+        const whatsappBookingForm = document.getElementById('whatsappBookingForm');
+        const openWhatsAppBtn = document.getElementById('openWhatsAppBtn');
+        const closeSuccessModalBtn = document.getElementById('closeSuccessModal');
+        
+        // Buttons (Make sure IDs match in HTML)
+        const bookFreeSessionBtn = document.getElementById('bookFreeSessionBtn');
+        const heroBookBtn = document.getElementById('heroBookBtn');
+
+        let whatsappFormData = {};
+
+        // ✅ 3. Helper Functions
+        function openModal() {
+            if(whatsappModal) {
+                whatsappModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Disable scroll
+            }
+        }
+
+        function closeModals() {
+            if(whatsappModal) whatsappModal.style.display = 'none';
+            if(successModal) successModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Enable scroll
+        }
+
+        function generateMessage(data) {
+            return `🌟 *CareerGuidex - Free Session Request* 🌟%0A%0A` +
+                   `Hello! I'd like to book a free session.%0A%0A` +
+                   `📝 *Name:* ${data.fullName}%0A` +
+                   `📧 *Email:* ${data.email}%0A` +
+                   `🎯 *Purpose:* ${data.purpose}%0A%0A` +
+                   `Please confirm my slot.`;
+        }
+
+        // ✅ 4. Event Listeners (Fixing the Click Issue)
+        
+        // Navbar Button
+        if (bookFreeSessionBtn) {
+            bookFreeSessionBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal();
+            });
+        }
+
+        // Hero Section Button
+        if (heroBookBtn) {
+            heroBookBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal();
+            });
+        }
+
+        // Close Buttons
+        if(closeWhatsappModal) closeWhatsappModal.addEventListener('click', closeModals);
+        if(closeSuccessModalBtn) closeSuccessModalBtn.addEventListener('click', closeModals);
+
+        // Click Outside to Close
+        window.addEventListener('click', function(e) {
+            if (e.target === whatsappModal || e.target === successModal) {
+                closeModals();
+            }
+        });
+
+        // ✅ 5. Form Submission Logic
+        if (whatsappBookingForm) {
+            whatsappBookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get Data
+                whatsappFormData = {
+                    fullName: document.getElementById('fullName').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    purpose: document.getElementById('purpose').value.trim()
+                };
+
+                // Hide Form Modal
+                if(whatsappModal) whatsappModal.style.display = 'none';
+
+                // Show Success Modal
+                if(successModal) {
+                    successModal.style.display = 'flex';
+                }
+            });
+        }
+
+        // ✅ 6. Open WhatsApp Button Logic
+        if (openWhatsAppBtn) {
+            openWhatsAppBtn.addEventListener('click', () => {
+                const message = generateMessage(whatsappFormData);
+                const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+                window.open(whatsappURL, '_blank');
+                closeModals();
+            });
+        }
+    });
+</script>
+
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
