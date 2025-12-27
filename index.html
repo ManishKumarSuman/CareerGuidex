@@ -36,11 +36,12 @@
         </div>
 
         <div class="nav-buttons">
-          <button 
-    class="btn-secondary"
-    onclick="window.open('https://forms.gle/ts52nUnJUDSyypux8', '_blank')">
-    Mentor+
-  </button>
+          <button
+            class="btn-secondary"
+            onclick="window.open('https://forms.gle/ts52nUnJUDSyypux8', '_blank')"
+          >
+            Mentor+
+          </button>
           <button class="btn-primary" id="bookFreeSessionBtn">
             Book Free Session
           </button>
@@ -84,17 +85,14 @@
               Your first session is completely free!
             </p>
 
-            <div
-              class="hero-buttons animate-fade-in"
-              style="animation-delay: 0.6s"
-            >
-              <button class="btn-primary" id="heroBookBtn">
-                <i class="fas fa-calendar-check"></i> Book Free Call
-              </button>
-              <button class="btn-secondary">
-                <i class="fas fa-play-circle"></i> 
-              </button>
-            </div>
+<div class="hero-buttons animate-fade-in" style="animation-delay: 0.6s">
+    <button class="btn-primary" id="heroBookBtn" type="button">
+        <i class="fas fa-calendar-check"></i> Book Free Call
+    </button>
+    <button class="btn-ai" id="aiPickerBtn" type="button">
+        <i class="fas fa-robot"></i> AI Mentor Picker
+    </button>
+</div> -->
 
             <div
               class="hero-stats animate-fade-in"
@@ -170,48 +168,54 @@
         </div>
 
         <div class="companies-carousel">
-          <!-- Company logos will be added as .png files -->
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
             class="company-logo"
             alt="Amazon"
           />
+
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
             class="company-logo"
             alt="Microsoft"
           />
+
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
             class="company-logo"
             alt="Google"
           />
+
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
             class="company-logo"
             alt="Apple"
           />
+
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
             class="company-logo"
             alt="Netflix"
           />
+
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
             class="company-logo"
             alt="LinkedIn"
           />
+
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/9/96/Meta-Logo.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg"
             class="company-logo"
             alt="Meta"
           />
+
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/4/44/IBM_logo.svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
             class="company-logo"
             alt="IBM"
           />
-          <!-- Duplicate for seamless scroll -->
+
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
             class="company-logo"
@@ -890,193 +894,374 @@
       </div>
     </footer>
 
-<div class="modal-overlay" id="whatsappModal">
-    <div class="modal-container" id="whatsappFormModal">
+    <div class="modal-overlay" id="whatsappModal">
+      <div class="modal-container" id="whatsappFormModal">
         <div class="modal-header">
-            <button class="modal-close" id="closeWhatsappModal">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="modal-icon">
-                <i class="fas fa-headset"></i>
-            </div>
-            <h3 class="modal-title">Book Your Free Session</h3>
-            <p class="modal-subtitle">Fill in your details and we'll connect you with an expert mentor</p>
+          <button class="modal-close" id="closeWhatsappModal">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="modal-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3 class="modal-title">Book Your Free Session</h3>
+          <p class="modal-subtitle">
+            Fill in your details and we'll connect you with an expert mentor
+          </p>
         </div>
         <div class="modal-body">
-            <form id="whatsappBookingForm">
-                <div class="form-group">
-                    <label for="fullName">
-                        <i class="fas fa-user"></i> Full Name
-                    </label>
-                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">
-                        <i class="fas fa-envelope"></i> Email Address
-                    </label>
-                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
-                </div>
-                
-                <div class="form-group">
-                    <label for="purpose">
-                        <i class="fas fa-bullseye"></i> Purpose of Session
-                    </label>
-                    <textarea id="purpose" name="purpose" required placeholder="Tell us about your career goals..."></textarea>
-                </div>
-                
-                <div class="form-footer">
-                    <div class="whatsapp-icon">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>We'll contact you via WhatsApp</span>
+          <form id="whatsappBookingForm">
+            <div class="form-group">
+              <label for="fullName">
+                <i class="fas fa-user"></i> Full Name
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                placeholder="Enter your full name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                <i class="fas fa-envelope"></i> Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter your email address"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="purpose">
+                <i class="fas fa-bullseye"></i> Purpose of Session
+              </label>
+              <textarea
+                id="purpose"
+                name="purpose"
+                required
+                placeholder="Tell us about your career goals..."
+              ></textarea>
+            </div>
+
+            <div class="form-footer">
+              <div class="whatsapp-icon">
+                <i class="fab fa-whatsapp"></i>
+                <span>We'll contact you via WhatsApp</span>
+              </div>
+              <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane"></i> Submit & Continue
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="successModal">
+      <div class="modal-container success-modal">
+        <div class="modal-header">
+          <div class="modal-icon">
+            <i class="fas fa-check"></i>
+          </div>
+          <h3 class="modal-title">All Set! 🎉</h3>
+          <p class="modal-subtitle">
+            Your free session request has been submitted successfully
+          </p>
+        </div>
+        <div class="modal-body">
+          <p
+            style="text-align: center; margin-bottom: 25px; color: var(--gray)"
+          >
+            We're now redirecting you to WhatsApp to finalize your booking.
+            Please send the pre-filled message to confirm your session.
+          </p>
+
+          <div class="success-actions">
+            <button class="btn-whatsapp" id="openWhatsAppBtn">
+              <i class="fab fa-whatsapp"></i> Open WhatsApp Now
+            </button>
+            <button class="btn-secondary" id="closeSuccessModal">
+              Close This Window
+            </button>
+          </div>
+
+          <div
+            style="
+              text-align: center;
+              margin-top: 25px;
+              color: var(--gray);
+              font-size: 14px;
+            "
+          >
+            <i class="fas fa-info-circle"></i> Our team will contact you within
+            2 hours
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div class="modal-overlay" id="aiPickerModal" style="z-index: 10001;">
+    <div class="modal-content glass-ai" style="max-width: 500px; overflow: hidden; position: relative;">
+        
+        <div id="aiStepInput">
+            <div class="modal-header" style="background: linear-gradient(135deg, #8b5cf6, #d946ef);">
+                <button class="modal-close" id="closeAiModal"><i class="fas fa-times"></i></button>
+                <div style="font-size: 40px; color: white; margin-bottom: 10px; animation: float 3s infinite;">✨</div>
+                <h3 style="color: white; font-weight: 800;">AI Mentor Match</h3>
+                <p style="color: rgba(255,255,255,0.9);">Tell us your goal, and our AI will find the perfect mentor.</p>
+            </div>
+            <div class="modal-body">
+                <form id="aiForm">
+                    <div class="form-group">
+                        <label>What's your current role?</label>
+                        <select id="aiRole" class="form-input" required>
+                            <option value="">Select Role</option>
+                            <option value="student">Student / Fresher</option>
+                            <option value="developer">Software Developer</option>
+                            <option value="designer">Designer</option>
+                            <option value="manager">Product Manager</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
-                    <button type="submit" class="btn-primary">
-                        <i class="fas fa-paper-plane"></i> Submit & Continue
+                    <div class="form-group">
+                        <label>What do you want to learn? (Keywords)</label>
+                        <input type="text" id="aiKeywords" class="form-input" placeholder="e.g. Python, AWS, Leadership, Figma" required>
+                    </div>
+                    <button type="submit" class="btn-ai-submit">
+                        Find My Mentor <i class="fas fa-magic"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="aiStepLoading" style="display: none; padding: 50px; text-align: center;">
+            <div class="ai-loader">
+                <div class="ai-circle"></div>
+                <div class="ai-circle"></div>
+                <div class="ai-circle"></div>
+            </div>
+            <h3 style="margin-top: 20px; color: var(--primary);">Analyzing Profile...</h3>
+            <p id="aiLoadingText" style="color: var(--gray); font-size: 14px;">Matching skills...</p>
+        </div>
+
+        <div id="aiStepResult" style="display: none;">
+            <div class="modal-header" style="background: #10b981; padding: 20px;">
+                <button class="modal-close" id="closeAiResult"><i class="fas fa-times"></i></button>
+                <h3 style="color: white; margin: 0;">Match Found! (94% Match)</h3>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="mentor-reveal">
+                    <img id="resImg" src="" style="width: 100px; height: 100px; border-radius: 50%; border: 4px solid #10b981; margin-bottom: 15px;">
+                    <h2 id="resName" style="color: var(--dark); font-size: 24px;">Name</h2>
+                    <p id="resRole" style="color: var(--primary); font-weight: 600;">Role</p>
+                    <p id="resCompany" style="color: var(--gray); margin-bottom: 20px;">Company</p>
+                    
+                    <div style="background: #f0fdf4; padding: 10px; border-radius: 10px; margin-bottom: 20px; text-align: left;">
+                        <p style="font-size: 13px; color: #15803d; margin: 0;">
+                            <i class="fas fa-check-circle"></i> <b>Why this match?</b><br>
+                            Expert in: <span id="resSkills">Skills</span>
+                        </p>
+                    </div>
+
+                    <button id="aiBookBtn" class="btn-primary" style="width: 100%;">
+                        Book Session Now <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
-</div>
 
-<div class="modal-overlay" id="successModal">
-    <div class="modal-container success-modal">
-        <div class="modal-header">
-            <div class="modal-icon">
-                <i class="fas fa-check"></i>
-            </div>
-            <h3 class="modal-title">All Set! 🎉</h3>
-            <p class="modal-subtitle">Your free session request has been submitted successfully</p>
-        </div>
-        <div class="modal-body">
-            <p style="text-align: center; margin-bottom: 25px; color: var(--gray);">
-                We're now redirecting you to WhatsApp to finalize your booking. 
-                Please send the pre-filled message to confirm your session.
-            </p>
-            
-            <div class="success-actions">
-                <button class="btn-whatsapp" id="openWhatsAppBtn">
-                    <i class="fab fa-whatsapp"></i> Open WhatsApp Now
-                </button>
-                <button class="btn-secondary" id="closeSuccessModal">
-                    Close This Window
-                </button>
-            </div>
-            
-            <div style="text-align: center; margin-top: 25px; color: var(--gray); font-size: 14px;">
-                <i class="fas fa-info-circle"></i> Our team will contact you within 2 hours
-            </div>
-        </div>
     </div>
 </div>
 
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
         // ✅ 1. Configuration
-        const WHATSAPP_NUMBER = "919583438210"; 
+        const WHATSAPP_NUMBER = "919583438210";
 
         // ✅ 2. Elements Selection
-        const whatsappModal = document.getElementById('whatsappModal');
-        const successModal = document.getElementById('successModal');
-        const closeWhatsappModal = document.getElementById('closeWhatsappModal');
-        const whatsappBookingForm = document.getElementById('whatsappBookingForm');
-        const openWhatsAppBtn = document.getElementById('openWhatsAppBtn');
-        const closeSuccessModalBtn = document.getElementById('closeSuccessModal');
-        
+        const whatsappModal = document.getElementById("whatsappModal");
+        const successModal = document.getElementById("successModal");
+        const closeWhatsappModal =
+          document.getElementById("closeWhatsappModal");
+        const whatsappBookingForm = document.getElementById(
+          "whatsappBookingForm"
+        );
+        const openWhatsAppBtn = document.getElementById("openWhatsAppBtn");
+        const closeSuccessModalBtn =
+          document.getElementById("closeSuccessModal");
+
         // Buttons (Make sure IDs match in HTML)
-        const bookFreeSessionBtn = document.getElementById('bookFreeSessionBtn');
-        const heroBookBtn = document.getElementById('heroBookBtn');
+        const bookFreeSessionBtn =
+          document.getElementById("bookFreeSessionBtn");
+        const heroBookBtn = document.getElementById("heroBookBtn");
 
         let whatsappFormData = {};
 
         // ✅ 3. Helper Functions
         function openModal() {
-            if(whatsappModal) {
-                whatsappModal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Disable scroll
-            }
+          if (whatsappModal) {
+            whatsappModal.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Disable scroll
+          }
         }
 
         function closeModals() {
-            if(whatsappModal) whatsappModal.style.display = 'none';
-            if(successModal) successModal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Enable scroll
+          if (whatsappModal) whatsappModal.style.display = "none";
+          if (successModal) successModal.style.display = "none";
+          document.body.style.overflow = "auto"; // Enable scroll
         }
 
         function generateMessage(data) {
-            return `🌟 *CareerGuidex - Free Session Request* 🌟%0A%0A` +
-                   `Hello! I'd like to book a free session.%0A%0A` +
-                   `📝 *Name:* ${data.fullName}%0A` +
-                   `📧 *Email:* ${data.email}%0A` +
-                   `🎯 *Purpose:* ${data.purpose}%0A%0A` +
-                   `Please confirm my slot.`;
+          return (
+            `🌟 *CareerGuidex - Free Session Request* 🌟%0A%0A` +
+            `Hello! I'd like to book a free session.%0A%0A` +
+            `📝 *Name:* ${data.fullName}%0A` +
+            `📧 *Email:* ${data.email}%0A` +
+            `🎯 *Purpose:* ${data.purpose}%0A%0A` +
+            `Please confirm my slot.`
+          );
         }
 
         // ✅ 4. Event Listeners (Fixing the Click Issue)
-        
+
         // Navbar Button
         if (bookFreeSessionBtn) {
-            bookFreeSessionBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                openModal();
-            });
+          bookFreeSessionBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            openModal();
+          });
         }
 
         // Hero Section Button
         if (heroBookBtn) {
-            heroBookBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                openModal();
-            });
+          heroBookBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            openModal();
+          });
         }
 
         // Close Buttons
-        if(closeWhatsappModal) closeWhatsappModal.addEventListener('click', closeModals);
-        if(closeSuccessModalBtn) closeSuccessModalBtn.addEventListener('click', closeModals);
+        if (closeWhatsappModal)
+          closeWhatsappModal.addEventListener("click", closeModals);
+        if (closeSuccessModalBtn)
+          closeSuccessModalBtn.addEventListener("click", closeModals);
 
         // Click Outside to Close
-        window.addEventListener('click', function(e) {
-            if (e.target === whatsappModal || e.target === successModal) {
-                closeModals();
-            }
+        window.addEventListener("click", function (e) {
+          if (e.target === whatsappModal || e.target === successModal) {
+            closeModals();
+          }
         });
 
         // ✅ 5. Form Submission Logic
         if (whatsappBookingForm) {
-            whatsappBookingForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get Data
-                whatsappFormData = {
-                    fullName: document.getElementById('fullName').value.trim(),
-                    email: document.getElementById('email').value.trim(),
-                    purpose: document.getElementById('purpose').value.trim()
-                };
+          whatsappBookingForm.addEventListener("submit", function (e) {
+            e.preventDefault();
 
-                // Hide Form Modal
-                if(whatsappModal) whatsappModal.style.display = 'none';
+            // Get Data
+            whatsappFormData = {
+              fullName: document.getElementById("fullName").value.trim(),
+              email: document.getElementById("email").value.trim(),
+              purpose: document.getElementById("purpose").value.trim(),
+            };
 
-                // Show Success Modal
-                if(successModal) {
-                    successModal.style.display = 'flex';
-                }
-            });
+            // Hide Form Modal
+            if (whatsappModal) whatsappModal.style.display = "none";
+
+            // Show Success Modal
+            if (successModal) {
+              successModal.style.display = "flex";
+            }
+          });
         }
 
         // ✅ 6. Open WhatsApp Button Logic
         if (openWhatsAppBtn) {
-            openWhatsAppBtn.addEventListener('click', () => {
-                const message = generateMessage(whatsappFormData);
-                const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
-                window.open(whatsappURL, '_blank');
-                closeModals();
-            });
+          openWhatsAppBtn.addEventListener("click", () => {
+            const message = generateMessage(whatsappFormData);
+            const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+            window.open(whatsappURL, "_blank");
+            closeModals();
+          });
         }
-    });
-</script>
+      });
+    </script>
+    
+
+
+
+
+
+
+
 
 
     <script src="script.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

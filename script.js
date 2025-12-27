@@ -128,25 +128,25 @@
             document.body.style.overflow = 'auto';
         }
         
-        // Book Free Session button
-        bookFreeSessionBtn.addEventListener('click', () => {
-            // For free session, we'll open WhatsApp directly
-            const message = `Hello CareerGuidex Team 👋
-I am contacting through the CareerGuidex website to book a FREE career guidance session.
+//         // Book Free Session button
+//         bookFreeSessionBtn.addEventListener('click', () => {
+//             // For free session, we'll open WhatsApp directly
+//             const message = `Hello CareerGuidex Team 👋
+// I am contacting through the CareerGuidex website to book a FREE career guidance session.
 
-I'm looking for guidance on my career direction and would like to know the next steps.
+// I'm looking for guidance on my career direction and would like to know the next steps.
 
-Please share available time slots for a free 15-minute session.
+// Please share available time slots for a free 15-minute session.
 
-Thank you.`;
+// Thank you.`;
             
-            openWhatsApp(message);
-        });
+//             openWhatsApp(message);
+//         });
         
-        // Hero Book button
-        heroBookBtn.addEventListener('click', () => {
-            bookFreeSessionBtn.click();
-        });
+//         // Hero Book button
+//         heroBookBtn.addEventListener('click', () => {
+//             bookFreeSessionBtn.click();
+//         });
         
         // Mentor Book buttons
         bookMentorBtns.forEach(btn => {
@@ -344,3 +344,140 @@ Thank you.`;
 
         
         
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // ... (Aapka purana config code) ...
+        const WHATSAPP_NUMBER = "919583438210"; 
+
+        // ============ AI MENTOR DATASET (10 EXPERTS) ============
+        const aiMentors = [
+            { name: "Sarah Johnson", role: "Product Manager", company: "Microsoft", tags: ["product", "management", "strategy", "roadmap", "agile", "business"], img: "https://randomuser.me/api/portraits/women/32.jpg" },
+            { name: "Rajesh Kumar", role: "Software Engineer", company: "Google", tags: ["java", "dsa", "backend", "system design", "coding", "software"], img: "https://randomuser.me/api/portraits/men/54.jpg" },
+            { name: "Priya Sharma", role: "Data Scientist", company: "Amazon", tags: ["data", "ai", "ml", "python", "analytics", "statistics"], img: "https://randomuser.me/api/portraits/women/68.jpg" },
+            { name: "Michael Chen", role: "UX Designer", company: "Meta", tags: ["design", "ui", "ux", "figma", "research", "user"], img: "https://randomuser.me/api/portraits/men/32.jpg" },
+            { name: "Ananya Patel", role: "Marketing Head", company: "Flipkart", tags: ["marketing", "seo", "digital", "brand", "social", "growth"], img: "https://randomuser.me/api/portraits/women/44.jpg" },
+            { name: "David Miller", role: "DevOps Engineer", company: "Netflix", tags: ["devops", "cloud", "aws", "docker", "kubernetes", "ci/cd"], img: "https://randomuser.me/api/portraits/men/22.jpg" },
+            { name: "Emily Davis", role: "Frontend Dev", company: "Airbnb", tags: ["frontend", "react", "javascript", "css", "html", "web"], img: "https://randomuser.me/api/portraits/women/12.jpg" },
+            { name: "Vikram Singh", role: "Cyber Security", company: "IBM", tags: ["security", "cyber", "network", "hacking", "infosec"], img: "https://randomuser.me/api/portraits/men/86.jpg" },
+            { name: "Sophia Lee", role: "Blockchain Dev", company: "Coinbase", tags: ["blockchain", "crypto", "solidity", "web3", "smart contracts"], img: "https://randomuser.me/api/portraits/women/65.jpg" },
+            { name: "Amit Verma", role: "Cloud Architect", company: "Azure", tags: ["cloud", "azure", "architecture", "infrastructure", "serverless"], img: "https://randomuser.me/api/portraits/men/45.jpg" }
+        ];
+
+        // ============ AI PICKER LOGIC ============
+        const aiPickerBtn = document.getElementById('aiPickerBtn');
+        const aiPickerModal = document.getElementById('aiPickerModal');
+        const aiForm = document.getElementById('aiForm');
+        const aiStepInput = document.getElementById('aiStepInput');
+        const aiStepLoading = document.getElementById('aiStepLoading');
+        const aiStepResult = document.getElementById('aiStepResult');
+        const closeAiModal = document.getElementById('closeAiModal');
+        const closeAiResult = document.getElementById('closeAiResult');
+        const aiBookBtn = document.getElementById('aiBookBtn');
+
+        let selectedAIMentor = null;
+
+        // 1. Open AI Modal
+        if(aiPickerBtn) {
+            aiPickerBtn.onclick = (e) => {
+                e.preventDefault();
+                aiPickerModal.style.display = 'flex';
+                // Reset States
+                aiStepInput.style.display = 'block';
+                aiStepLoading.style.display = 'none';
+                aiStepResult.style.display = 'none';
+                document.body.style.overflow = 'hidden';
+            };
+        }
+
+        // 2. Handle Form Submit (The AI Process)
+        if(aiForm) {
+            aiForm.onsubmit = (e) => {
+                e.preventDefault();
+                
+                // Get User Input
+                const userKeywords = document.getElementById('aiKeywords').value.toLowerCase();
+                const userRole = document.getElementById('aiRole').value;
+
+                // Show Loading
+                aiStepInput.style.display = 'none';
+                aiStepLoading.style.display = 'block';
+
+                // Change Loading Text Dynamically
+                const loadingTexts = ["Scanning database...", "Analyzing skills...", "Finding match..."];
+                let textIdx = 0;
+                const textInterval = setInterval(() => {
+                    document.getElementById('aiLoadingText').innerText = loadingTexts[textIdx % 3];
+                    textIdx++;
+                }, 800);
+
+                // Simulate Processing (3 Seconds)
+                setTimeout(() => {
+                    clearInterval(textInterval);
+                    
+                    // --- MATCHING ALGORITHM ---
+                    let bestMatch = aiMentors[0]; // Default
+                    let maxScore = -1;
+
+                    aiMentors.forEach(mentor => {
+                        let score = 0;
+                        // Keyword matching
+                        mentor.tags.forEach(tag => {
+                            if (userKeywords.includes(tag)) score += 2;
+                        });
+                        // Bonus for exact match
+                        if (mentor.role.toLowerCase().includes(userKeywords)) score += 5;
+                        
+                        if (score > maxScore) {
+                            maxScore = score;
+                            bestMatch = mentor;
+                        }
+                    });
+
+                    // Store Result
+                    selectedAIMentor = bestMatch;
+
+                    // Update Result UI
+                    document.getElementById('resName').innerText = bestMatch.name;
+                    document.getElementById('resRole').innerText = bestMatch.role;
+                    document.getElementById('resCompany').innerText = "@ " + bestMatch.company;
+                    document.getElementById('resImg').src = bestMatch.img;
+                    document.getElementById('resSkills').innerText = bestMatch.tags.slice(0, 4).join(", ");
+
+                    // Show Result
+                    aiStepLoading.style.display = 'none';
+                    aiStepResult.style.display = 'block';
+
+                }, 2500); // 2.5 seconds delay
+            };
+        }
+
+        // 3. Book Button Action (Send to WhatsApp)
+        if(aiBookBtn) {
+            aiBookBtn.onclick = () => {
+                const userName = "Student"; // You can capture this too if needed
+                const message = `🤖 *AI Recommended Booking* 🤖%0A%0A` +
+                                `I used the AI Picker and matched with:%0A` +
+                                `👨‍🏫 *Mentor:* ${selectedAIMentor.name}%0A` +
+                                `💼 *Role:* ${selectedAIMentor.role} at ${selectedAIMentor.company}%0A%0A` +
+                                `Please help me schedule a session with them!`;
+                
+                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+                aiPickerModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            };
+        }
+
+        // 4. Close Functions
+        const closeAI = () => {
+            aiPickerModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        };
+
+        if(closeAiModal) closeAiModal.onclick = closeAI;
+        if(closeAiResult) closeAiResult.onclick = closeAI;
+        
+        // ... (Baaki aapka purana code yahan rahega) ...
+    });

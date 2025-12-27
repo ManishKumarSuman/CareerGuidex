@@ -2367,3 +2367,105 @@ body {
     opacity: 1;
   }
 }
+
+
+
+
+
+
+/* ============ AI PICKER STYLES ============ */
+
+/* 1. Special AI Button in Hero */
+.btn-ai {
+    background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: pulse-glow 2s infinite;
+}
+
+.btn-ai:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.6);
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(139, 92, 246, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+}
+
+/* 2. AI Modal Form Styles */
+.glass-ai {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.btn-ai-submit {
+    width: 100%;
+    background: var(--dark);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-ai-submit:hover {
+    background: linear-gradient(135deg, #8b5cf6, #d946ef);
+}
+
+/* 3. Loading Animation (The Brain) */
+.ai-loader {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.ai-circle {
+    width: 20px;
+    height: 20px;
+    background: #8b5cf6;
+    border-radius: 50%;
+    animation: bounce 0.6s infinite alternate;
+}
+
+.ai-circle:nth-child(2) { animation-delay: 0.2s; background: #d946ef; }
+.ai-circle:nth-child(3) { animation-delay: 0.4s; background: #6366f1; }
+
+@keyframes bounce {
+    to { transform: translateY(-20px); opacity: 0.7; }
+}
+
+/* 4. Result Reveal Animation */
+.mentor-reveal {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
